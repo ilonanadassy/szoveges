@@ -1,0 +1,36 @@
+2. Inicializáld a Git repository-t
+Ha még nincs Git repository létrehozva a mappában, futtasd:
+
+bash
+git init
+Ez létrehozza a .git mappát, amely szükséges a Git működéséhez.
+
+3. Állítsd be a távoli tárolót
+Adj hozzá a GitHub repository URL-jét:
+
+bash
+git remote add origin https://github.com/ilonanadassy/haromot.git
+Ha már van beállított origin, de más URL-lel, akkor előbb töröld:
+
+bash
+git remote remove origin
+git remote add origin https://github.com/ilonanadassy/haromot.git
+4. Add hozzá a fájlokat és készíts commit-et
+bash
+git add .
+git commit -m "Első feltöltés a haromot repository-ba"
+Ezzel beállítod a fájlokat követésre és mented a változtatásokat.
+
+5. Feltöltés a GitHub-ra
+Ha a main branch nem létezik, előbb hozz létre egyet:
+
+bash
+git checkout -b main
+Majd töltsd fel:
+
+bash
+git push -u origin main
+Ha a fő branch-ed master, akkor main helyett ezt használd:
+
+bash
+git push -u origin master
